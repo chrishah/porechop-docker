@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /usr/src/Porechop/porechop
+rm adapters.py
+ln -s /in/$1 adapters.py
+cd ..
+python3 setup.py install
+
+shift
+porechop $*
