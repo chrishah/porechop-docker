@@ -16,3 +16,4 @@ RUN git clone --recursive https://github.com/rrwick/Porechop.git && \
 	python3 setup.py install
 
 ADD ./porechop.custom /usr/bin/
+RUN chmod a+x /usr/bin/porechop.custom
