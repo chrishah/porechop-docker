@@ -1,11 +1,11 @@
 #!/bin/bash
 
-rm -v /usr/src/Porechop/porechop/adapters.py \
-	/usr/local/lib/python3.6/dist-packages/porechop/adapters.py \
-	/usr/src/Porechop/build/lib/porechop/adapters.py
-ln -s $(pwd)/$1 /usr/src/Porechop/porechop/adapters.py
-cd /usr/src/Porechop/
-python3 setup.py install
+rm -v /home/porechopuser/src/Porechop/porechop/adapters.py
+ln -s $(pwd)/$1 /home/porechopuser/src/Porechop/porechop/adapters.py
+
+cd /home/porechopuser/src/Porechop/
+make clean
+make
 cd -
 
 shift
