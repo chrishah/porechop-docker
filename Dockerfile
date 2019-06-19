@@ -17,6 +17,7 @@ RUN git clone --recursive https://github.com/rrwick/Porechop.git && \
 
 #USER root
 ADD ./porechop.custom /usr/bin/
+RUN chmod a+x /usr/bin/porechop.custom
 RUN ln -s /usr/src/Porechop/porechop-runner.py /usr/bin/porechop && \
 	chmod a+x /usr/bin/porechop.custom
 RUN chmod -R a+w /usr/src/Porechop

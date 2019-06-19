@@ -17,7 +17,7 @@ The image includes a simple helper script `porechop.custom` that you can use if 
 
 For example, the following will recompile porechop with the local file `adapters.pass1.py`, then execute porechop and in this case just display the usage info.
 ```bash
-$ docker run --rm -v $(pwd):/in -w /in chrishah/porechop:0.2.4 bash porechop.custom ./adapters.pass1.py -h
+$ docker run --rm -v $(pwd):/in -w /in chrishah/porechop:0.2.4 porechop.custom ./adapters.pass1.py -h
 ```
 
 You can also enter the container environment and work within it. All executables, e.g. `porechop`, are in the `PATH`.
